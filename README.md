@@ -13,4 +13,6 @@ we update the links to show the right page.
 
 # step4 - homepage clickable
 
+# step5 - aboutpage clickable
 
+# step6 - move javascript code to app.js
