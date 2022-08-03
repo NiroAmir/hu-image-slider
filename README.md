@@ -11,4 +11,6 @@ we add navbar from bootstrap
 duplicate the index.html to about.html
 we update the links to show the right page.
 
-# step4 - introduce javascript
+# step4 - homepage clickable
+
+
