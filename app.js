@@ -5,6 +5,10 @@ function makeMenuLinkChangePage(linkId, pageToShow) {
 
   pageLinkElement.addEventListener('click', function () {
     console.log('you clicked me');
+    
+    if (currentPageId == pageToShow){
+      return;
+    }
     document.getElementById(pageToShow).classList.remove('d-none');
 
     document.getElementById(currentPageId).classList.add('d-none');
