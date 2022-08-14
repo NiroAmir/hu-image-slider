@@ -32,6 +32,15 @@ call the function makeMenuLinkChangePage with the news page parameters
 add image to html with buttons
 # step 11
 make the buttons change the image
-# step 12
-prev and next buttons change the image according to the image array.
-we dealt when we exceed the array size or going beneath it
+
+14.8.2022
+# Step 12 - slider is working
+Prev and Next button change the image according to the image array
+We dealt when we exceed the array size or going beneath it
+
+# Step 13 - Auto image cycle 
+add button to run the setInterval function
+
+# Step 14 - Bugfix run slide show only one time 
+When pressing auto run button we call function autoSlideShow multiple times.
+Which give us undesirable results.
