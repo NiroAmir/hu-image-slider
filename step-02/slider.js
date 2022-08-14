@@ -28,7 +28,14 @@ function nextImage(){
      renderImage(currentImage);
 }
 
-
+function autoSlideShow(){
+     setInterval(function(){
+          nextImage();
+     },1000);
+}
 
 document.getElementById('prevBtn').addEventListener('click', prevImage);
 document.getElementById('nextBtn').addEventListener('click', nextImage);
+document.getElementById('autoRun').addEventListener('click', autoSlideShow);
+
+

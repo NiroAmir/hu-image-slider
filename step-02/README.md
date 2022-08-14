@@ -27,3 +27,11 @@ change the currentPageId with the new page
 add news link
 add news div (page)
 call the function makeMenuLinkChangePage with the news page parameters
+
+# step 10 - Image is showing
+add image to html with buttons
+# step 11
+make the buttons change the image
+# step 12
+prev and next buttons change the image according to the image array.
+we dealt when we exceed the array size or going beneath it
