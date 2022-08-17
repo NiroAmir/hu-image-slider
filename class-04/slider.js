@@ -19,6 +19,12 @@ const imagesArray = [
 
 
 let currentImage = 0;
+
+const autoRunButton = document.getElementById('autoRun');
+const stopRunButton = document.getElementById('stop');
+const prevButton = document.getElementById('prevBtn');
+const nextButton = document.getElementById('nextBtn');
+
 function renderImage(){
      const imageObject = imagesArray[currentImage];
 
@@ -58,8 +64,8 @@ function autoSlideShow(){
           
           nextImage();
      },1000);
-     document.getElementById('stop').classList.remove('d-none');
-     document.getElementById('autoRun').classList.add('d-none');
+     stopRunButton.classList.remove('d-none');
+     autoRunButton.classList.add('d-none');
 }
 
 /*
@@ -69,16 +75,15 @@ function stopSlideShow(){
      clearInterval(interval);
      //Set the interval to null so we can run autoSlideShow again
      interval = null;
-     document.getElementById('stop').classList.add('d-none');
-     document.getElementById('autoRun').classList.remove('d-none');
+     stopRunButton.classList.add('d-none');
+     autoRunButton.classList.remove('d-none');
    
 }
 
-document.getElementById('prevBtn').addEventListener('click', prevImage);
-document.getElementById('nextBtn').addEventListener('click', nextImage);
-document.getElementById('autoRun').addEventListener('click', autoSlideShow);
-document.getElementById('autoRun').addEventListener('click', autoSlideShow);
-document.getElementById('stop').addEventListener('click', stopSlideShow);
+prevButton.addEventListener('click', prevImage);
+nextButton.addEventListener('click', nextImage);
+autoRunButton.addEventListener('click', autoSlideShow);
+stopRunButton.addEventListener('click', stopSlideShow);
 
 /*  document.getElementById('slider-image').addEventListener('mouseenter',stopSlideShow)
  document.getElementById('slider-image').addEventListener('mouseleave',autoSlideShow) */
