@@ -44,3 +44,8 @@ add button to run the setInterval function
 # Step 14 - Bugfix run slide show only one time 
 When pressing auto run button we call function autoSlideShow multiple times.
 Which give us undesirable results.
+
+# Step 15 - Add button to stop the slideshow
+Use clear interval to stop the slide show
+
+# Step 16 - Add mouseenter and mouseleave to start or stop the slideshow
