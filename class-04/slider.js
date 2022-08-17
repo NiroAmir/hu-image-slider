@@ -25,11 +25,12 @@ const stopRunButton = document.getElementById('stop');
 const prevButton = document.getElementById('prevBtn');
 const nextButton = document.getElementById('nextBtn');
 
+const baseUrl = 'images/';
 function renderImage(){
      const imageObject = imagesArray[currentImage];
 
 
-     const imageURL = 'images/' + imageObject.imageURL;
+     const imageURL = baseUrl + imageObject.imageURL;
     document.getElementById('slider-image').src = imageURL;
     document.getElementById('image-title').innerHTML = imageObject.title;
 
