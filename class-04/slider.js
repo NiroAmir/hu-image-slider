@@ -80,6 +80,7 @@ function nextImage(){
      renderImage(currentImage);
 }
 let interval = null;
+let isSlideShowRunning = false;
 
 
 function autoSlideShow(){
@@ -94,6 +95,7 @@ function autoSlideShow(){
      },1000);
      stopRunButton.classList.remove('d-none');
      autoRunButton.classList.add('d-none');
+     isSlideShowRunning = true;
 }
 
 /*
@@ -105,6 +107,7 @@ function stopSlideShow(){
      interval = null;
      stopRunButton.classList.add('d-none');
      autoRunButton.classList.remove('d-none');
+     isSlideShowRunning = false;
    
 }
 
@@ -113,6 +116,23 @@ nextButton.addEventListener('click', nextImage);
 autoRunButton.addEventListener('click', autoSlideShow);
 stopRunButton.addEventListener('click', stopSlideShow);
 
-/*  document.getElementById('slider-image').addEventListener('mouseenter',stopSlideShow)
- document.getElementById('slider-image').addEventListener('mouseleave',autoSlideShow) */
+function mauseStratSlideShow(){
+if (isSlideShowRunning == false){
+     return;
+}
+interval = setInterval(function () {
+    nextImage();
+  }, 1000);
+
+}
+function mauseStopSlideShow(){
+if (isSlideShowRunning == false){
+      return    ;
+}
+clearInterval(interval);
+}
+
+
+ document.getElementById('slider-image').addEventListener('mouseenter',mauseStopSlideShow)
+ document.getElementById('slider-image').addEventListener('mouseleave',mauseStratSlideShow)
 renderImage();
